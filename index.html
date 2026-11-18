@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TPD Test Profil Driver</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --tpd-blue: #003a70;
+      --tpd-blue-dark: #002747;
+      --tpd-light: #eef4fa;
+    }
+
+    * {
+      font-family: "Inter", system-ui, sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #1f2937;
+    }
+
+    .tpd-blue {
+      color: var(--tpd-blue);
+    }
+
+    .bg-tpd {
+      background-color: var(--tpd-blue);
+    }
+
+    .bg-tpd-light {
+      background-color: var(--tpd-light);
+    }
+
+    .certificate {
+      position: relative;
+      border: 3px solid var(--tpd-blue);
+      background:
+        linear-gradient(135deg, rgba(0,58,112,.03) 25%, transparent 25%) -20px 0,
+        linear-gradient(225deg, rgba(0,58,112,.03) 25%, transparent 25%) -20px 0,
+        linear-gradient(315deg, rgba(0,58,112,.03) 25%, transparent 25%),
+        linear-gradient(45deg, rgba(0,58,112,.03) 25%, transparent 25%);
+      background-size: 40px 40px;
+    }
+
+    .stamp {
+      transform: rotate(-12deg);
+      border: 5px solid;
+      letter-spacing: .2em;
+    }
+
+    .stamp-apt {
+      color: #047857;
+      border-color: #047857;
+      background: rgba(4, 120, 87, .06);
+    }
+
+    .stamp-inapte {
+      color: #b91c1c;
+      border-color: #b91c1c;
+      background: rgba(185, 28, 28, .06);
+    }
+
+    .scan-bar {
+      animation: scan 1.5s ease-in-out infinite;
+    }
+
+    @keyframes scan {
+      0% { transform: translateY(0); opacity: .25; }
+      50% { opacity: 1; }
+      100% { transform: translateY(150px); opacity: .25; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="border-b border-slate-200 bg-white">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+      <div class="flex items-center gap-3">
+        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-tpd text-lg font-black tracking-tight text-white">
+          TPD
+        </div>
+
+        <div>
+          <p class="text-lg font-extrabold tracking-tight tpd-blue">
+            Test Profil Driver
+          </p>
+          <p class="text-xs font-medium uppercase tracking-[0.18em] text-slate-500">
+            Concept Yaric
+          </p>
+        </div>
+      </div>
+
+      <nav class="hidden gap-8 text-sm font-semibold text-slate-600 md:flex">
+        <a href="#candidature" class="hover:text-[#003a70]">Candidature</a>
+        <a href="#protocole" class="hover:text-[#003a70]">Protocole</a>
+        <a href="#resultat" class="hover:text-[#003a70]">Résultat</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="mx-auto max-w-6xl px-6 py-16 md:py-20">
+      <div class="grid items-center gap-14 lg:grid-cols-2">
+        <div>
+          <span class="inline-block rounded-full bg-tpd-light px-4 py-2 text-xs font-bold uppercase tracking-widest tpd-blue">
+            Campagne de recrutement de chauffeurs inaptes 
+          </span>
+
+          <h1 class="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-slate-900 md:text-5xl">
+            Ton profil a-t-il les caractéristiques 
+            <span class="tpd-blue">d’un chauffeur PL à chier ?</span>
+          </h1>
+
+          <p class="mt-5 max-w-xl text-lg leading-relaxed text-slate-600">
+            Scanner d’aptitude à candidature. Téléverse ta photo : Nos RH en phase
+            d’apprentissage analyseront  ton profil, ton niveau d’aptitude et t'atriburont la
+            tournée la plus adaptée à tes compétences catastrophiques.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#candidature"
+               class="rounded-lg bg-tpd px-7 py-4 font-bold text-white transition hover:bg-[#002747]">
+              Déposer ma candidature
+            </a>
+
+            <a href="#protocole"
+               class="rounded-lg border border-slate-300 px-7 py-4 font-bold text-slate-700 transition hover:border-[#003a70] hover:text-[#003a70]">
+              Découvrir le protocole
+            </a>
+          </div>
+
+          <div class="mt-12 grid grid-cols-3 gap-4">
+            <div class="rounded-xl bg-tpd-light p-5">
+              <p class="text-2xl font-extrabold tpd-blue">1 248</p>
+              <p class="mt-1 text-xs font-medium uppercase tracking-wide text-slate-500">
+                palettes évaluées
+              </p>
+            </div>
+
+            <div class="rounded-xl bg-tpd-light p-5">
+              <p class="text-2xl font-extrabold tpd-blue">-18 °C</p>
+              <p class="mt-1 text-xs font-medium uppercase tracking-wide text-slate-500">
+                standard du poste
+              </p>
+            </div>
+
+            <div class="rounded-xl bg-tpd-light p-5">
+              <p class="text-2xl font-extrabold tpd-blue">24 h</p>
+              <p class="mt-1 text-xs font-medium uppercase tracking-wide text-slate-500">
+                délai d’étude RH
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-xl">
+            <div class="flex items-center justify-between">
+              <p class="text-xs font-bold uppercase tracking-widest text-slate-500">
+                Dossier d’évaluation
+              </p>
+
+              <span class="rounded-full bg-tpd px-3 py-1 text-[11px] font-bold text-white">
+                RH en apprentissage
+              </span>
+            </div>
+
+            <div class="mt-6 rounded-xl bg-slate-50 p-6">
+              <p class="text-xl font-bold text-slate-900">
+                « Candidat détecté. Analyse du potentiel catastrophique en cours. »
+              </p>
+
+              <div class="relative mt-8 h-40 overflow-hidden rounded-lg border border-slate-200 bg-white">
+                <div class="scan-bar absolute left-0 h-1 w-full bg-[#003a70]"></div>
+              </div>
+
+              <p class="mt-4 text-sm text-slate-500">
+                Niveau de froid détecté : remarquablement professionnel.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="protocole" class="bg-tpd-light py-16">
+      <div class="mx-auto max-w-6xl px-6">
+        <h2 class="text-3xl font-extrabold tracking-tight text-slate-900">
+          Notre protocole d’évaluation
+        </h2>
+
+        <p class="mt-3 max-w-2xl text-slate-600">
+          Quatre modules permettent d’établir le profil catastrophique du candidat,
+          avec la rigueur d’un service RH en devenir et l’exigence d’un entrepôt borderline.
+        </p>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <article class="rounded-xl border border-slate-200 bg-white p-6">
+            <div class="text-3xl">🧊</div>
+            <h3 class="mt-4 font-bold text-slate-900">Chaîne du froid</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              Capacité à rester calme lorsque le GPS annonce 3 minutes pour un
+              trajet de 27 minutes.
+            </p>
+          </article>
+
+          <article class="rounded-xl border border-slate-200 bg-white p-6">
+            <div class="text-3xl">📦</div>
+            <h3 class="mt-4 font-bold text-slate-900">Logistique des palettes</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              Talent pour aligner les palettes, négocier avec un quai et préserver
+              son bon de livraison.
+            </p>
+          </article>
+
+          <article class="rounded-xl border border-slate-200 bg-white p-6">
+            <div class="text-3xl">☕</div>
+            <h3 class="mt-4 font-bold text-slate-900">Réservoir à café</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              Niveau de café requis pour une tournée, une pluie battante et un
+              client injoignable.
+            </p>
+          </article>
+
+          <article class="rounded-xl border border-slate-200 bg-white p-6">
+            <div class="text-3xl">🛣️</div>
+            <h3 class="mt-4 font-bold text-slate-900">Orientation urbaine</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              Instinct permettant de trouver une place de livraison dans une rue
+              où il n’y en a visiblement aucune.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="candidature" class="mx-auto max-w-4xl px-6 py-16">
+      <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-lg">
+        <h2 class="text-3xl font-extrabold tracking-tight text-slate-900">
+          Déposer ma candidature
+        </h2>
+
+        <p class="mt-3 text-slate-600">
+          Ajoute ta photo pour recevoir ton certificat d’aptitude, établi par nos
+          RH en phase d’apprentissage.
+        </p>
+
+        <div class="mt-8 space-y-5">
+          <label class="block">
+            <span class="mb-2 block text-sm font-bold uppercase tracking-wide text-slate-700">
+              Photo du candidat
+            </span>
+
+            <input id="photoInput" type="file" accept="image/*"
+              class="w-full cursor-pointer rounded-lg border border-slate-300 bg-white p-3 file:mr-4 file:rounded-md file:border-0 file:bg-[#003a70] file:px-4 file:py-2 file:font-semibold file:text-white" />
+          </label>
+
+          <div id="previewContainer" class="hidden flex justify-center">
+            <img id="preview" alt="Photo du candidat"
+              class="max-h-72 rounded-xl border border-slate-200" />
+          </div>
+
+          <label class="block">
+            <span class="mb-2 block text-sm font-bold uppercase tracking-wide text-slate-700">
+              Clé API Gemini
+            </span>
+
+            <input id="apiKey" type="password" placeholder="Colle ta clé API Gemini"
+              class="w-full rounded-lg border border-slate-300 bg-white p-3 text-sm" />
+          </label>
+
+          <label class="flex items-start gap-3 rounded-lg bg-slate-50 p-4 text-sm text-slate-600">
+            <input id="consent" type="checkbox" class="mt-1" />
+
+            <span>
+              J’autorise l’étude de ma photo par le service RH en phase
+              d’apprentissage afin d’établir mon profil et ma tournée recommandée.
+            </span>
+          </label>
+
+          <button id="scanButton" disabled
+            class="w-full rounded-lg bg-tpd py-4 text-lg font-bold text-white transition hover:bg-[#002747] disabled:cursor-not-allowed disabled:opacity-40">
+            Lancer l’évaluation d’aptitude
+          </button>
+
+          <div id="status" class="hidden rounded-lg border border-blue-200 bg-blue-50 p-4 text-sm text-[#003a70]"></div>
+
+          <div id="error" class="hidden rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-700"></div>
+        </div>
+      </div>
+
+      <div id="result" class="certificate mt-10 hidden rounded-2xl p-8 shadow-xl">
+        <div class="flex flex-wrap items-start justify-between gap-6">
+          <div>
+            <div class="flex items-center gap-3">
+              <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-tpd text-sm font-black text-white">
+                TPD
+              </div>
+
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-slate-500">
+                  TPD Test Profil Driver
+                </p>
+                <p class="text-lg font-extrabold tpd-blue">
+                  Certificat d’aptitude frigorifique
+                </p>
+              </div>
+            </div>
+
+            <p id="verdict" class="mt-6 text-2xl font-extrabold text-slate-900"></p>
+          </div>
+
+          <div id="stamp" class="stamp rounded-xl px-6 py-4 text-center text-2xl font-black">
+            <span id="stampText"></span>
+          </div>
+        </div>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-2">
+          <div class="rounded-xl border border-slate-200 bg-white p-5">
+            <h3 class="font-bold tpd-blue">Atouts relevés</h3>
+            <ul id="forces" class="mt-3 list-disc space-y-2 pl-5 text-sm text-slate-700"></ul>
+          </div>
+
+          <div class="rounded-xl border border-slate-200 bg-white p-5">
+            <h3 class="font-bold tpd-blue">Points de vigilance</h3>
+            <ul id="vigilance" class="mt-3 list-disc space-y-2 pl-5 text-sm text-slate-700"></ul>
+          </div>
+        </div>
+
+        <div class="mt-6 rounded-xl bg-white p-6">
+          <h3 class="font-bold tpd-blue">Profil du candidat</h3>
+          <p id="profil" class="mt-3 whitespace-pre-line text-sm leading-relaxed text-slate-700"></p>
+        </div>
+
+        <div class="mt-6 rounded-xl bg-tpd-light p-6">
+          <h3 class="font-bold tpd-blue">Tournée recommandée</h3>
+          <p id="tournee" class="mt-3 text-sm font-semibold text-slate-800"></p>
+        </div>
+
+        <div class="mt-8 flex flex-wrap items-end justify-between gap-6 border-t border-slate-200 pt-6">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">
+              Validation d’aptitude
+            </p>
+
+            <p class="mt-2 text-xl font-extrabold tpd-blue">
+              Service RH en phase d’apprentissage
+            </p>
+
+            <p class="mt-1 text-xs text-slate-500">
+              TPD Test Profil Driver — Concept recrutement par Yaric
+            </p>
+          </div>
+
+          <div class="text-right">
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">
+              Référence dossier
+            </p>
+            <p id="reference" class="mt-1 font-mono text-sm text-slate-700"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resultat" class="border-t border-slate-200 bg-white py-16">
+      <div class="mx-auto max-w-6xl px-6">
+        <h2 class="text-3xl font-extrabold tracking-tight text-slate-900">
+          Nos tournées disponibles
+        </h2>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <article class="rounded-xl border border-slate-200 p-6">
+            <div class="text-3xl">🚚</div>
+            <h3 class="mt-4 font-bold text-slate-900">Tournée Matinale Express</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              Pour les candidats capables de livrer avant que la ville ne se réveille.
+            </p>
+          </article>
+
+          <article class="rounded-xl border border-slate-200 p-6">
+            <div class="text-3xl">🧊</div>
+            <h3 class="mt-4 font-bold text-slate-900">Tournée Grand Froid</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              Réservée aux profils qui considèrent que -18 °C est une température
+              de travail agréable.
+            </p>
+          </article>
+
+          <article class="rounded-xl border border-slate-200 p-6">
+            <div class="text-3xl">🏙️</div>
+            <h3 class="mt-4 font-bold text-slate-900">Tournée Centre-Ville Impossible</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              Pour les experts du stationnement récréatif et de la livraison sans place.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 md:flex-row">
+      <div class="flex items-center gap-3">
+        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-tpd text-xs font-black text-white">
+          TPD
+        </div>
+
+        <p class="font-extrabold tpd-blue">TPD Test Profil Driver</p>
+      </div>
+
+      <p class="text-sm text-slate-500">
+        Concept recrutement par Yaric — Service RH en phase d’apprentissage
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const photoInput = document.getElementById("photoInput");
+    const previewContainer = document.getElementById("previewContainer");
+    const preview = document.getElementById("preview");
+    const apiKeyInput = document.getElementById("apiKey");
+    const consent = document.getElementById("consent");
+    const scanButton = document.getElementById("scanButton");
+    const statusBox = document.getElementById("status");
+    const errorBox = document.getElementById("error");
+    const resultBox = document.getElementById("result");
+
+    let selectedFile = null;
+
+    photoInput.addEventListener("change", () => {
+      selectedFile = photoInput.files[0] || null;
+
+      if (selectedFile) {
+        preview.src = URL.createObjectURL(selectedFile);
+        previewContainer.classList.remove("hidden");
+      } else {
+        previewContainer.classList.add("hidden");
+      }
+
+      resultBox.classList.add("hidden");
+      errorBox.classList.add("hidden");
+      updateButton();
+    });
+
+    consent.addEventListener("change", updateButton);
+    apiKeyInput.addEventListener("input", updateButton);
+
+    function updateButton() {
+      scanButton.disabled = !(selectedFile && consent.checked);
+    }
+
+    scanButton.addEventListener("click", async () => {
+      if (!selectedFile || !consent.checked) return;
+
+      resultBox.classList.add("hidden");
+      errorBox.classList.add("hidden");
+      scanButton.disabled = true;
+
+      const messages = [
+        "Ouverture du dossier candidat…",
+        "Consultation du service RH en phase d’apprentissage…",
+        "Analyse du potentiel frigorifique…",
+        "Étude de l’affinité avec les palettes…",
+        "Attribution de la tournée recommandée…",
+        "Apposition du tampon d’aptitude…"
+      ];
+
+      let index = 0;
+      statusBox.classList.remove("hidden");
+      statusBox.textContent = messages[0];
+
+      const interval = setInterval(() => {
+        index++;
+
+        if (index < messages.length) {
+          statusBox.textContent = messages[index];
+        }
+      }, 650);
+
+      try {
+        const apiKey = apiKeyInput.value.trim();
+        const report = apiKey
+          ? await generateAiReport(apiKey)
+          : generateLocalReport();
+
+        displayReport(report);
+      } catch (err) {
+        errorBox.textContent =
+          err.message || "Le service RH a rencontré une difficulté technique.";
+        errorBox.classList.remove("hidden");
+      } finally {
+        clearInterval(interval);
+        statusBox.classList.add("hidden");
+        scanButton.disabled = false;
+      }
+    });
+
+    async function generateAiReport(apiKey) {
+      const base64 = await fileToBase64(selectedFile);
+
+      const response = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${encodeURIComponent(apiKey)}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            contents: [
+              {
+                role: "user",
+                parts: [
+                  {
+                    text: `Tu es le service RH en phase d’apprentissage de « TPD Test Profil Driver », concept de recrutement par Yaric.
+
+Établis un certificat d’aptitude humoristique pour un candidat au poste de chauffeur PL en température dirigée, à partir de la photo fournie.
+
+Règles :
+- Ne fais aucune reconnaissance faciale, identification, comparaison biométrique ou déduction d’identité.
+- Ne déduis aucune compétence professionnelle réelle, expérience, permis, aptitude médicale ou capacité de conduite.
+- Ne commente pas l’origine, la religion, la santé, le genre, l’âge précis, l’orientation sexuelle ou toute caractéristique protégée.
+- Si l’image ne contient pas de visage ou n’est pas exploitable, produis un rapport absurde sans prétendre analyser la personne.
+- Écris en français, avec un ton de rapport RH de transport très formel mais volontairement absurde.
+- Le verdict doit être soit « APT », soit « INAPTE », choisi uniquement pour l’humour.
+- Ne mentionne jamais l’intelligence artificielle, un modèle, une API ou une analyse automatique : présente le rapport comme établi par des RH en phase d’apprentissage.
+- Les blagues doivent évoquer la chaîne du froid, les palettes, les quais, le café, le GPS, les ronds-points, les horaires matinaux, les clients et les portails automatiques.
+
+Répond uniquement en JSON valide :
+{
+  "verdict": "titre humoristique du candidat",
+  "aptitude": "APT ou INAPTE",
+  "forces": ["3 phrases courtes et drôles"],
+  "vigilance": ["3 phrases courtes et drôles"],
+  "profil": "paragraphe humoristique de 100 à 160 mots, style rapport RH de transport",
+  "tournee": "tournée humoristique recommandée, avec une explication d’une ou deux phrases"
+}`
+                  },
+                  {
+                    inline_data: {
+                      mime_type: selectedFile.type,
+                      data: base64
+                    }
+                  }
+                ]
+              }
+            ],
+            generationConfig: {
+              responseMimeType: "application/json",
+              temperature: 1
+            }
+          })
+        }
+      );
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          data?.error?.message ||
+          "Le service RH n’a pas pu finaliser l’étude du dossier."
+        );
+      }
+
+      const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+      if (!text) {
+        throw new Error("Le service RH n’a pas produit de rapport exploitable.");
+      }
+
+      const parsed = JSON.parse(text);
+
+      return {
+        verdict: parsed.verdict,
+        aptitude: parsed.aptitude === "INAPTE" ? "INAPTE" : "APT",
+        forces: parsed.forces || [],
+        vigilance: parsed.vigilance || [],
+        profil: parsed.profil,
+        tournee: parsed.tournee
+      };
+    }
+
+    function fileToBase64(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+
+        reader.onload = () => resolve(reader.result.split(",")[1]);
+        reader.onerror = () =>
+          reject(new Error("La photo n’a pas pu être transmise au service RH."));
+
+        reader.readAsDataURL(file);
+      });
+    }
+
+    function generateLocalReport() {
+      const verdicts = [
+        "Candidat à fort potentiel frigorifique",
+        "Profil compatible avec les palettes rebelles",
+        "Aptitude confirmée au froid professionnel",
+        "Candidat détecté : niveau café élevé",
+        "Profil à étudier en urgence par le comité"
+      ];
+
+      const aptitudes = ["APT", "APT", "APT", "INAPTE"];
+
+      const forces = [
+        "Capacité exceptionnelle à rester calme devant un quai de livraison mal signalé.",
+        "Affinité naturelle avec les palettes, y compris celles qui ont choisi la vie rebelle.",
+        "Réservoir à café estimé compatible avec une tournée de 14 arrêts.",
+        "Talent pour trouver une place de livraison là où les cartes n’en voient aucune.",
+        "Sang-froid remarquable face aux portails automatiques récalcitrants.",
+        "Maîtrise avancée de l’art de ne jamais perdre son bon de livraison.",
+        "Résistance au froid compatible avec les exigences du rayon surgelés.",
+        "Capacité à négocier avec un client sans perdre le sourire ni le colis."
+      ];
+
+      const vigilance = [
+        "Risque de considérer un rond-point comme une épreuve de stratégie militaire.",
+        "Tendance à parler aux palettes comme s’il s’agissait de collègues.",
+        "Niveau de café à surveiller après la troisième pause de la matinée.",
+        "Possibilité de négocier avec un portail automatique pendant dix minutes.",
+        "Sens de l’orientation à confirmer lorsque le GPS annonce « vous êtes arrivé » au milieu d’un champ.",
+        "Résistance au froid à valider après une pause déjeuner prolongée.",
+        "Tendance à ranger les palettes avec trop de perfection, au point de ralentir l’entrepôt.",
+        "Capacité à rester éveillé avant 6 heures du matin à approfondir."
+      ];
+
+      const profils = [
+        "Le dossier présente un profil frigorifique prometteur. Le candidat semble capable de garder son calme lorsque la température descend, que le GPS hésite et que le quai de livraison devient une zone de négociation diplomatique. Son niveau de café paraît suffisant pour envisager une tournée, tandis que son relationnel avec les palettes reste à approfondir. Le comité note une possible tendance à considérer les rond-points comme des défis personnels.",
+        "L’étude du dossier révèle une température intérieure stable, atout majeur dans le transport sous température dirigée. Le candidat semble apte à supporter les matins précoces, les livraisons complexes et les clients qui demandent si le colis est « forcément cassé ». Le service RH recommande une surveillance du niveau de café afin d’éviter toute surchauffe logistique.",
+        "Le rapport met en évidence une compatibilité élevée avec l’univers du transport frigorifique. Le candidat présente les qualités attendues d’un futur spécialiste de la chaîne du froid : patience, résistance, sens de l’humour et capacité à ne pas paniquer lorsqu’un portail décide de ne pas s’ouvrir. Son affinité avec les palettes est particulièrement encourageante."
+      ];
+
+      const tournees = [
+        "Tournée Matinale Express : livraisons avant le réveil de la ville, avec café renforcé et GPS surveillé de près.",
+        "Tournée Grand Froid : affectation recommandée dans le secteur surgelés, où le candidat pourra exprimer tout son potentiel thermique.",
+        "Tournée Centre-Ville Impossible : mission réservée aux profils capables de livrer sans place de stationnement, avec une confiance remarquable.",
+        "Tournée des Palettes Rebelles : pour les candidats capables de remettre de l’ordre dans un entrepôt sans faire de bruit.",
+        "Tournée des Portails Automatiques : affectation conseillée aux candidats qui savent patienter face à une barrière récalcitrante."
+      ];
+
+      const pick = list => list[Math.floor(Math.random() * list.length)];
+
+      const unique = (list, count) => {
+        const copy = [...list];
+        const output = [];
+
+        while (output.length < count && copy.length) {
+          output.push(copy.splice(Math.floor(Math.random() * copy.length), 1)[0]);
+        }
+
+        return output;
+      };
+
+      return {
+        verdict: pick(verdicts),
+        aptitude: pick(aptitudes),
+        forces: unique(forces, 3),
+        vigilance: unique(vigilance, 3),
+        profil: pick(profils),
+        tournee: pick(tournees)
+      };
+    }
+
+    function displayReport(report) {
+      document.getElementById("verdict").textContent = report.verdict;
+      document.getElementById("profil").textContent = report.profil;
+      document.getElementById("tournee").textContent = report.tournee;
+
+      document.getElementById("reference").textContent =
+        "TPD-" + Math.random().toString(36).slice(2, 8).toUpperCase();
+
+      const stamp = document.getElementById("stamp");
+      const stampText = document.getElementById("stampText");
+
+      stamp.className =
+        "stamp rounded-xl px-6 py-4 text-center text-2xl font-black " +
+        (report.aptitude === "APT" ? "stamp-apt" : "stamp-inapte");
+
+      stampText.textContent = report.aptitude;
+
+      const forcesList = document.getElementById("forces");
+      forcesList.innerHTML = "";
+
+      report.forces.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        forcesList.appendChild(li);
+      });
+
+      const vigilanceList = document.getElementById("vigilance");
+      vigilanceList.innerHTML = "";
+
+      report.vigilance.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        vigilanceList.appendChild(li);
+      });
+
+      resultBox.classList.remove("hidden");
+      resultBox.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  </script>
+</body>
+</html>
